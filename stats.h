@@ -9,34 +9,32 @@
  *
  *****************************************************************************/
 /**
- * @file <stats.h> 
- * @brief <Header file >
+ * @file <Add File Name> 
+ * @brief <Add Brief Description Here >
  *
- * Contains Declarations of Functions, which are needed for calculating the statistics of 
- * a given array.
- * @author <Srivatsan Ravichandran>
- * @date <5th November 2019>
+ * <Add Extended Description Here>
+ *
+ * @author <Add FirsName LastName>
+ * @date <Add date >
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
 /* Add Your Declarations and Function Comments here */ 
-void print_statistics(unsigned char *arrayBaseAddress, int sizeOfArray);
-//Prints the statistics of a given array
-void print_array(unsigned char *arrayBaseAddress,int sizeOfArray);
-//Prints the elements of a Char array
-float find_mean(unsigned char *arrayBaseAddress,int sizeOfArray);
-//Calculates the mean value of a given array
-int find_median(unsigned char *arrayBaseAddress,int sizeOfArray);
-//Calculates the median value of a given array
-int find_maximum(unsigned char *arrayBaseAddress,int sizeOfArray);
-//Calculates the maximum value of a given array
-int find_minimum(unsigned char *arrayBaseAddress,int sizeOfArray);
-//Calculates the minimum value of a given array
-int* sort_array(unsigned char *arrayBaseAddress, int sizeOfArray);
-//Sorts the given array in ascending order
 
+/**
+ * @brief <Add Brief Description of Function Here>
+ *
+ * <Add Extended Description Here>
+ *
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ * @param <Add InputName> <add description here>
+ *
+ * @return <Add Return Informaiton here>
+ */
 
 
 #endif /* __STATS_H__ */

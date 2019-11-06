@@ -9,13 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <stats.c> 
- * @brief <Week1 Assignment Implementation>
+ * @file <Add File Name> 
+ * @brief <Add Brief Description Here >
  *
  * <Add Extended Description Here>
- * This program calculates the statistics of a given array
- * @author <Srivatsan Ravichandran>
- * @date <5th November 2019>
+ *
+ * @author <Add FirsName LastName>
+ * @date <Add date >
  *
  */
 
@@ -37,92 +37,7 @@ void main() {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
-  print_statistics(test,SIZE);
+
 }
 
 /* Add other Implementation File Code Here */
-void print_statistics(unsigned char *arrayBaseAddress, int sizeOfArray){
-	printf("\n Embedded Systems Coursera Week 1 Assignment\n");
-	print_array(arrayBaseAddress, sizeOfArray);
-	printf("\n Statistics of the array:\n");
-	printf("\n Mean value of the array: %f",find_mean(arrayBaseAddress,sizeOfArray));
-	printf("\n Median value of the array: %d",find_median(arrayBaseAddress,sizeOfArray));
-	printf("\n Maximum value of the array: %d",find_maximum(arrayBaseAddress,sizeOfArray));
-	printf("\n Minimum value of the array: %d",find_minimum(arrayBaseAddress,sizeOfArray));
-}
-void print_array(unsigned char *arrayBaseAddress,int sizeOfArray){
-	int i=0;
-	printf("\n The input array is :\n");
-	for (i = 0; i < sizeOfArray; i++){
-		printf(" [%d]\t",(int)*arrayBaseAddress);
-		arrayBaseAddress++;
-	}
-}
-
-float find_mean(unsigned char *arrayBaseAddress,int sizeOfArray){
-	//Calculaties the mean value
-	float sum=0;
-	int i=0;
-	float mean=0;
-	for (i = 0; i < sizeOfArray; i++){
-		sum += (int)*arrayBaseAddress;
-		arrayBaseAddress++;
-	}
-	mean = sum / sizeOfArray;
-	return mean;
-}
-int find_median(unsigned char *arrayBaseAddress,int sizeOfArray){
-	//calculates the median value
-	int i;
-	int* intArrayBaseAddress = sort_array(arrayBaseAddress,sizeOfArray);
-	int median =0;
-	if(SIZE%2 == 0){
-		median = (intArrayBaseAddress[SIZE/2] + intArrayBaseAddress[SIZE/2+1])/2;
-	}
-	else{
-		median = intArrayBaseAddress[(SIZE+1)/2];
-	}
-	return median;
-}
-int find_maximum(unsigned char *arrayBaseAddress,int sizeOfArray){
-	//Calculating the maximum value
-	int i=0;
-	int maximumElement = (int)arrayBaseAddress[i];
-	for (i = 1; i < sizeOfArray; i++)	{
-		if (maximumElement < (int)arrayBaseAddress[i]){
-			maximumElement = (int)arrayBaseAddress[i];
-		}
-	}
-	return maximumElement;
-}
-int find_minimum(unsigned char *arrayBaseAddress,int sizeOfArray){
-	//Calculating the minimum value
-	int i=0;
-	int minimumElement = (int)arrayBaseAddress[i];
-	for (i = 1; i < sizeOfArray; i++){
-		if (minimumElement > (int)arrayBaseAddress[i]){
-			minimumElement = (int)arrayBaseAddress[i];
-		}
-	}
-	return minimumElement;
-}
-
-int* sort_array(unsigned char *arrayBaseAddress, int sizeOfArray){
-	//Sorting in Ascending Order
-	int i,j;
-	int intArray[sizeOfArray];
-  	for(i=0;i<sizeOfArray;i++){
-  	intArray[i] = (int)*arrayBaseAddress;
-  	}	
-	for (i = 0; i < sizeOfArray; i++){
-		for (j = i + 1; j < sizeOfArray; j++){
-			if (intArray[j] < intArray[i]){
-				int temp = intArray[i];
-				intArray[i] = intArray[j];
-				intArray[j] = temp;
-			}
-		}
-	}
-	return intArray;
-}
-
