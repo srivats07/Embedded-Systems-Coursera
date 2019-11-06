@@ -1,4 +1,5 @@
-/* Add Author and Project Details here */
+Author: Srivatsan Ravichandran
+
 Embedded Systems Coursera Week1 Assignment
 
 The program calculates the statistics of a given Character array
